@@ -13,7 +13,7 @@ gulp.task('mdtex',function() {
   var transform = mdEqs({
     defaults: {
       display: { margin: '1pt' },
-      inline:  { margin: '1pt' }
+      inline:  { margin: '1pt 1pt 1pt -4pt' }
     }
   })
 
@@ -23,7 +23,7 @@ gulp.task('mdtex',function() {
     //.pipe(tap(function(file) { console.log(file.contents.toString()) }))
     .pipe(latex())
     .pipe(pdftocairo({format: 'png'}))
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest('docs/images'))
     .pipe(tap(function(file) {
       transform.completeSync(file,function() {
         var img = '<img alt="'+this.alt+'" valign="middle" src="'+this.path+
