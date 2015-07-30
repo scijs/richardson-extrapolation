@@ -1,6 +1,6 @@
 {
   "name": "richardson-extrapolation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use Richardson Extrapolation sequence acceleration to compute the order of convergence and exact value of a sequence",
   "main": "lib/index.js",
   "scripts": {

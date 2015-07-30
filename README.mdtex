@@ -42,12 +42,15 @@ richardson( func, 1, { n: 3 } )
 
 ## API
 
-### `require('richardson-extrapolation')( func, h, knowns )`
+#### `require('richardson-extrapolation')( func, h, knowns )`
 **Arguments:**
 - `func`: a function that takes small parameter $h$ as its only argument
 - `h`: either a starting parameter size or a set of parameter sizes
   - if a number, then $h$ is subdivided by a factor of 2 as needed t solve for the unknowns
   - if an array of numbers, then the first $n$ are used as values of $h$ in order solve for $n$ unknowns
+- `knowns`: a hash of known parameters. Possibilities are:
+  - $n$ provided (solves for $f$ and $c$)
+  - $f$ provided (solves for $n$ and $c$)
 
 **Returns**: A hash containing three values: the approximated exact value $f$, order of convergence $n$, and the constant of the error term $c$.
 
