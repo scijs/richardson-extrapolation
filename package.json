@@ -1,23 +1,22 @@
 {
-  "name": "ode-euler",
-  "version": "1.0.3",
-  "description": "Integrate a system of ODEs using the Euler method",
+  "name": "richardson-extrapolation",
+  "version": "1.0.0",
+  "description": "Use Richardson Extrapolation sequence acceleration to compute the order of convergence and exact value of a sequence",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/scijs/ode-euler.git"
+    "url": "git://github.com/scijs/richardson-extrapolationode-euler.git"
   },
   "keywords": [
     "scijs",
-    "ode",
-    "euler",
-    "integration",
-    "differential-equations",
+    "sequence",
+    "convergence",
+    "richardson-extrapolation",
     "calculus",
-    "first-order"
+    "approximation"
   ],
   "author": "Ricky Reusser",
   "license": "MIT",
