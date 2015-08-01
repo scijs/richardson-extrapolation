@@ -19,6 +19,8 @@ $ npm install richardson-extrapolation
 
 ## Example
 
+For actual sample usage, see the [scijs/ode-rk4](https://github.com/scijs/ode-rk4/blob/master/test/test.js) tests that use this module along with a known solution to verify the order of convergence.
+
 ```javascript
 var richardson = require('richardson-extrapolation')
 
