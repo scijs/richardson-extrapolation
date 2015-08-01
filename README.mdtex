@@ -5,9 +5,9 @@
 
 ## Introduction
 
-[Richardson Extrapolation](https://en.wikipedia.org/wiki/Richardson_extrapolation) is a numerical method that uses solutions at multiple values of a small parameter $h$ (think: $h$ = grid size) to accelerate the converenge of a sequence. To make that concrete, consider an method $f(h)$ that computes an approximate value of the exact value $f$. Writing this as $$f(h) = f + c h^n + o(h^{n+1}),$$ it's clear that the unknowns are the exact value $f$ (approximate, with error term $o(h^{n+1})$), the error constant $c$, and the order of convergence $n$.
+[Richardson Extrapolation](https://en.wikipedia.org/wiki/Richardson_extrapolation) is a numerical method that uses solutions at multiple values of a small parameter $h$ (think: $h$ = grid size) to accelerate the converenge of a sequence. To make that concrete, consider an method $f(h)$ that approximates the value of $f$. Writing this as $$f(h) = f + c h^n + o(h^{n+1}),$$ the unknowns are the exact value $f$, the error constant $c$, and the order of convergence $n$.
 
-In its current form, this module solves for two of three parameters using the solution at two parameter sizes $h$. So for example, given the the order of convergence $n$, you may approximate the exact value $f$ with error of order $o(h^{n+1})$, or given the exact value $f$, you may solve for the order of convergence $n$.
+In its current form, this module solves for two of three unknowns using the solution at two parameter sizes $h$. So for example, given the the order of convergence $n$, you may approximate the exact value $f$ (with error of order $o(h^{n+1})$), or given the exact value $f$, you may solve for the order of convergence $n$.
 
 The solution of all three unknowns requires the solution of a set of three nonlinear equations and is not implemented yet. :(
 
